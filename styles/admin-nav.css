@@ -2,11 +2,21 @@
 :root { --admin-nav-width: 256px; --admin-nav-height: 64px; }
 .admin-body { min-height: 100vh; overflow-x: hidden; background: var(--bg, #f6f8fd); }
 .admin .sidebar, .app .sidebar {
+  display: flex;
+  flex-direction: column;
   width: var(--admin-nav-width);
   min-width: var(--admin-nav-width);
   box-sizing: border-box;
   background: var(--surface, #fff);
   z-index: 60;
+}
+.admin .sidebar__foot, .app .sidebar__footer {
+  display: grid;
+  flex: 0 0 auto;
+  gap: 4px;
+  margin-top: auto;
+  padding-top: 16px;
+  border-top: 1px solid var(--line, #e3e8f2);
 }
 .admin .sidebar__nav, .app .menu ul { display: grid; gap: 8px; margin-top: 36px; }
 .admin .sidebar__link, .app .menu__link {
