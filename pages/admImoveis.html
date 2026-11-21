@@ -13,16 +13,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="../styles/comum.css" />
-    <link rel="stylesheet" href="../styles/admImoveis.css" />
     <link rel="stylesheet" href="../styles/admin.css" />
+    <link rel="stylesheet" href="../styles/admImoveis.css" />
     <link rel="stylesheet" href="../styles/styles.css" />
+    <link rel="stylesheet" href="../styles/admin-nav.css" />
 
-    <script src="../js/admImoveis.js" defer></script>
+    <script src="../js/admin.js" defer></script>
   </head>
-  <body>
+  <body class="admin-body">
     <script src="../js/icons.js"></script>
 
-    <aside class="barra-lateral" id="barra-lateral">
+    <div class="admin">
+    <aside class="sidebar barra-lateral" id="sidebar" aria-label="Menu administrativo">
       <div class="sidebar__brand">
         <a href="../index.html">Norildo Santos</a>
         <span>Painel de Gestão</span>
@@ -56,7 +58,7 @@
         </a>
       </nav>
       <div class="sidebar__foot">
-        <a class="sidebar__link" href="#suporte">
+        <a class="sidebar__link" href="contato.html">
           <svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>
           Suporte
         </a>
@@ -66,11 +68,13 @@
         </a>
       </div>
     </aside>
-    <div class="fundo-escuro" id="fundo-escuro"></div>
+    <div class="sidebar-backdrop fundo-escuro" aria-hidden="true"></div>
 
-    <header class="barra-topo">
+    <div class="admin__main">
+    <header class="barra-topo topbar">
       <div class="esquerda">
-        <h1 class="topbar__title">Dashboard</h1>
+        <button class="botao-icone topbar__menu" type="button" data-sidebar-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar"><span class="icone" aria-hidden="true">menu</span></button>
+        <h1 class="topbar__title">Meus Imóveis</h1>
         <label class="pesquisa"
           ><span class="icone">search</span
           ><input placeholder="Buscar imóveis..." type="text"
@@ -89,7 +93,7 @@
       </div>
     </header>
 
-    <main class="conteudo">
+    <main class="conteudo admin-content">
       <section class="cabecalho-pagina">
         <div>
           <h2>Meus Imóveis</h2>
@@ -266,6 +270,7 @@
         </div>
       </section>
     </main>
-    <script src="../js/admin.js" defer></script>
+    </div>
+    </div>
   </body>
 </html>

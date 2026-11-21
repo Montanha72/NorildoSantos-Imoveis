@@ -11,5 +11,6 @@
   toggle.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
   menu.addEventListener('click', (event) => { if (event.target.closest('a')) setOpen(false); });
   document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setOpen(false); });
-  window.matchMedia('(min-width: 861px)').addEventListener('change', (event) => { if (event.matches) setOpen(false); });
+  const breakpoint = header.classList.contains('cabecalho') ? 768 : 861;
+  window.matchMedia(`(min-width: ${breakpoint}px)`).addEventListener('change', (event) => { if (event.matches) setOpen(false); });
 })();

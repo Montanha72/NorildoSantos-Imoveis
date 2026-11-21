@@ -713,3 +713,35 @@ img.is-missing { visibility: hidden; }
   .site-header__inner.container { padding-inline: 20px; }
   .site-header__actions .site-link { display: none; }
 }
+
+/* Cabeçalho público compartilhado: mesmo ritmo e dimensões em todas as páginas */
+.site-header { position: sticky; top: 0; z-index: 50; background: var(--surface); border-bottom: 1px solid var(--line); }
+@media (max-width: 860px) {
+  .site-header .header__inner,
+  .site-header .site-header__inner {
+    position: relative; display: flex; flex-wrap: nowrap; align-items: center; justify-content: space-between;
+    gap: 8px; min-height: 64px; height: 64px; padding: 0 16px;
+  }
+  .site-header .logo, .site-header .site-logo { flex: 0 1 auto; font-size: 1.15rem; line-height: 1.2; white-space: nowrap; }
+  .site-header .header__actions, .site-header .site-header__actions { display: flex; flex: 0 0 auto; align-items: center; gap: 8px; margin: 0; }
+  .site-header .link-entrar, .site-header .site-link { display: none; }
+  .site-header .header__actions .btn { min-height: 40px; padding: 0 10px; font-size: .7rem; }
+  .site-header .menu-toggle { display: inline-flex; flex: 0 0 40px; width: 40px; height: 40px; align-items: center; justify-content: center; }
+  .site-header .site-menu-toggle { padding: 0; font-size: 0; }
+  .site-header .site-menu-toggle::before { content: ""; width: 20px; height: 14px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor; }
+  .site-header .site-menu-toggle::after { content: ""; position: absolute; width: 20px; border-top: 2px solid currentColor; }
+  .site-header .nav, .site-header .site-nav {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 51; display: none; flex-direction: column;
+    align-items: stretch; gap: 0; padding: 8px 16px 16px; background: var(--surface);
+    border-bottom: 1px solid var(--line); box-shadow: 0 12px 24px rgba(15,29,53,.08);
+  }
+  .site-header.is-open .nav, .site-header.is-open .site-nav { display: flex; visibility: visible; opacity: 1; transform: none; }
+  .site-header .site-nav ul { display: grid; gap: 0; }
+  .site-header .nav a, .site-header .site-nav a {
+    display: block; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--line);
+    font-size: .875rem; line-height: 1.4; text-align: left;
+  }
+  .site-header .nav a[aria-current="page"], .site-header .site-nav a[aria-current="page"] { color: var(--gold); }
+  .container { padding-inline: 16px; }
+  .pagina { padding: 24px 16px; }
+}
