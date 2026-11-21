@@ -287,4 +287,10 @@ h4 {
   .cabecalho .acoes a { display: none; }
   .cabecalho .acoes a.botao { display: inline-flex; padding: 9px 12px; }
   .cabecalho nav { display: none; }
+  .cabecalho nav a.ativo,
+  .cabecalho nav a[aria-current="page"] {
+    color: #b88713;
+    font-weight: 700;
+    border-bottom: 1px solid var(--cor-borda);
+  }
 }

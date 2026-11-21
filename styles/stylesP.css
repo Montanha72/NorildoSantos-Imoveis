@@ -776,3 +776,43 @@ button { cursor: pointer; }
   .banner__panel { padding: 2.5rem; }
   .site-footer--inline .site-footer__inner { grid-template-columns: 1fr auto; align-items: start; }
 }
+
+/* Navegação pública mobile em Sobre e Vender */
+.site-header { position: sticky; top: 0; z-index: 50; }
+.site-header .site-menu-toggle { display: none; }
+.site-header .site-nav a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--ink); }
+@media (max-width: 767px) {
+  .site-header .site-header__inner {
+    position: relative; display: grid; grid-template-columns: minmax(0, 1fr) auto 40px;
+    align-items: center; gap: 8px; height: 64px; padding: 0 16px;
+  }
+  .site-header .site-logo { overflow: hidden; font-size: 1.125rem; text-overflow: ellipsis; white-space: nowrap; }
+  .site-header .site-header__actions { display: flex; align-items: center; gap: 8px; }
+  .site-header .site-header__actions .site-link { display: none; }
+  .site-header .site-header__actions .btn { min-height: 40px; padding: 0 10px; font-size: .7rem; white-space: nowrap; }
+  .site-header .site-menu-toggle {
+    position: relative; display: inline-flex; grid-column: 3; grid-row: 1; align-items: center;
+    justify-content: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line);
+    border-radius: 6px; background: transparent; color: var(--ink); font-size: 0;
+  }
+  .site-header .site-menu-toggle::before {
+    content: ""; width: 20px; height: 14px; border-top: 2px solid currentColor; border-bottom: 2px solid currentColor;
+  }
+  .site-header .site-menu-toggle::after { content: ""; position: absolute; width: 20px; border-top: 2px solid currentColor; }
+  .site-header .site-nav {
+    position: absolute; top: 100%; left: 0; right: 0; z-index: 51; display: none; order: initial;
+    padding: 8px 16px 16px; background: var(--surface); border-bottom: 1px solid var(--line);
+    box-shadow: 0 12px 24px rgba(15, 29, 53, .08);
+  }
+  .site-header.is-open .site-nav { display: block; }
+  .site-header .site-nav ul { display: grid; gap: 0; overflow: visible; }
+  .site-header .site-nav a {
+    display: block; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--line);
+    font-size: .875rem; white-space: normal;
+  }
+  .site-header .site-nav a[aria-current="page"] {
+    color: #d4a62a;
+    font-weight: 700;
+    border-bottom: 1px solid var(--line);
+  }
+}

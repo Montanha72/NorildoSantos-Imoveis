@@ -741,7 +741,11 @@ img.is-missing { visibility: hidden; }
     display: block; padding: 12px 4px; border: 0; border-bottom: 1px solid var(--line);
     font-size: .875rem; line-height: 1.4; text-align: left;
   }
-  .site-header .nav a[aria-current="page"], .site-header .site-nav a[aria-current="page"] { color: var(--gold); }
+  .site-header .nav a[aria-current="page"], .site-header .site-nav a[aria-current="page"] {
+    color: var(--gold);
+    font-weight: 700;
+    border-bottom: 1px solid var(--line);
+  }
   .container { padding-inline: 16px; }
   .pagina { padding: 24px 16px; }
 }
