@@ -693,3 +693,23 @@ img.is-missing { visibility: hidden; }
 
   .chat-fab { right: 16px; bottom: 16px; }
 }
+
+/* Compatibilidade do cabeçalho nas páginas Sobre e Vender */
+.site-header__inner { position: relative; display: flex; min-height: var(--header-h); justify-content: space-between; gap: 20px; }
+.site-logo { align-self: center; font-family: var(--font-serif); font-size: 1.35rem; font-weight: 600; color: var(--navy); white-space: nowrap; }
+.site-nav ul { display: flex; align-items: center; gap: 22px; }
+.site-nav a, .site-link { font-size: .8rem; color: var(--navy); }
+.site-menu-toggle { display: none; }
+@media (max-width: 860px) {
+  .site-header__inner { flex-wrap: wrap; padding-block: 12px; }
+  .site-menu-toggle { display: inline-flex; align-items: center; justify-content: center; width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 6px; color: var(--navy); }
+  .site-header__actions { margin-left: auto; }
+  .site-nav { display: none; flex: 1 0 100%; }
+  .site-header.is-open .site-nav { display: block; }
+  .site-nav ul { align-items: stretch; flex-direction: column; gap: 0; }
+  .site-nav a { display: block; padding: 12px 4px; border-top: 1px solid var(--line); }
+}
+@media (max-width: 600px) {
+  .site-header__inner.container { padding-inline: 20px; }
+  .site-header__actions .site-link { display: none; }
+}

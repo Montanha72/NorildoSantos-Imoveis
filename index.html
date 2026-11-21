@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
@@ -39,14 +39,14 @@
       <nav class="nav" id="menu-principal" aria-label="Navegação principal">
         <a href="#inicio" aria-current="page">Início</a>
         <a href="pages/imoveis.html">Imóveis</a>
-        <a href="#vender">Vender</a>
+        <a href="pages/vender.html">Vender</a>
         <a href="#sobre">Sobre</a>
         <a href="pages/contato.html">Contato</a>
       </nav>
 
       <div class="header__actions">
         <a class="link-entrar" href="pages/login.html">Entrar</a>
-        <a class="btn btn--primary btn--sm" href="#anunciar">Anunciar</a>
+        <a class="btn btn--primary btn--sm" href="pages/vender.html#cadastro">Anunciar</a>
         <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
           <svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg>
         </button>
@@ -121,12 +121,12 @@
             <h2>Imóveis em Alta</h2>
             <p>Seleção curada de propriedades exclusivas.</p>
           </div>
-          <a class="link-more" href="#imoveis">Ver todos <span aria-hidden="true">→</span></a>
+          <a class="link-more" href="pages/imoveis.html">Ver todos <span aria-hidden="true">→</span></a>
         </div>
 
         <div class="cards">
           <article class="card" data-cidade="São Paulo" data-bairro="Jardins">
-            <a class="card__link" href="#imovel-cobertura-jardins">
+            <a class="card__link" href="pages/detalhes.html">
               <div class="card__media">
                 <img src="img/imovel-1.jpg" alt="Sala de estar ampla da cobertura duplex nos Jardins" loading="lazy" data-fallback>
                 <span class="badge">Venda</span>
@@ -148,7 +148,7 @@
           </article>
 
           <article class="card" data-cidade="Barueri" data-bairro="Alphaville">
-            <a class="card__link" href="#imovel-casa-alphaville">
+            <a class="card__link" href="pages/detalhes.html">
               <div class="card__media">
                 <img src="img/imovel-2.jpg" alt="Fachada da casa contemporânea em Alphaville" loading="lazy" data-fallback>
               </div>
@@ -169,7 +169,7 @@
           </article>
 
           <article class="card" data-cidade="São Paulo" data-bairro="Itaim Bibi">
-            <a class="card__link" href="#imovel-apto-itaim">
+            <a class="card__link" href="pages/detalhes.html">
               <div class="card__media">
                 <img src="img/imovel-3.jpg" alt="Cozinha sofisticada do apartamento de alto padrão no Itaim" loading="lazy" data-fallback>
               </div>
@@ -259,8 +259,8 @@
         <h4>Navegação</h4>
         <ul>
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#imoveis">Imóveis</a></li>
-          <li><a href="#vender">Vender</a></li>
+          <li><a href="pages/imoveis.html">Imóveis</a></li>
+          <li><a href="pages/vender.html">Vender</a></li>
           <li><a href="#sobre">Sobre</a></li>
           <li><a href="pages/contato.html">Contato</a></li>
         </ul>
@@ -286,3 +286,4 @@
   <script src="js/script.js" defer></script>
 </body>
 </html>
+

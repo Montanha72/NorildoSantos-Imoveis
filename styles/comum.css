@@ -132,6 +132,32 @@ h4 {
   align-items: center;
   gap: 12px;
 }
+.cabecalho .menu-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  color: var(--cor-texto);
+}
+.cabecalho .menu-toggle .icone { font-size: 22px; }
+.cabecalho nav a[aria-current="page"] { color: var(--cor-texto); }
+.cabecalho.is-open nav {
+  display: flex;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  flex-direction: column;
+  gap: 0;
+  padding: 8px 20px 16px;
+  background: var(--cor-branco);
+  border-bottom: 1px solid var(--cor-borda);
+  box-shadow: 0 12px 24px rgba(15, 29, 53, .10);
+}
+.cabecalho.is-open nav a { padding: 12px 0; border-bottom: 1px solid var(--cor-borda); }
 .cabecalho .acoes a {
   font-size: 12px;
   font-weight: 600;
@@ -245,10 +271,20 @@ h4 {
   .cabecalho nav {
     display: flex;
   }
+  .cabecalho .menu-toggle { display: none; }
   .cabecalho .acoes a {
     display: inline-block;
   }
   .rodape > div {
     grid-template-columns: 2fr 1fr 1fr;
   }
+}
+
+@media (max-width: 767px) {
+  .cabecalho > div { position: relative; gap: 12px; padding: 12px 16px; }
+  .cabecalho .logo { font-size: 20px; }
+  .cabecalho .acoes { gap: 8px; }
+  .cabecalho .acoes a { display: none; }
+  .cabecalho .acoes a.botao { display: inline-flex; padding: 9px 12px; }
+  .cabecalho nav { display: none; }
 }

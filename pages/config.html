@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Configurações · Painel Imobiliário</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/stylesP.css">
+</head>
+<body>
+
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></symbol>
+    <symbol id="i-building" viewBox="0 0 24 24"><path d="M3 21V9l6-4 6 4v12M15 21V12h6v9M2 21h20M7 21v-5h4v5"/></symbol>
+    <symbol id="i-leads" viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4 3-6 7-6 1.5 0 2.8.3 3.9.9"/><circle cx="17" cy="17" r="3"/><path d="m19.2 19.2 2 2"/></symbol>
+    <symbol id="i-chart" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 17v-5M12 17V8M16 17v-3"/></symbol>
+    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/><circle cx="12" cy="12" r="7"/></symbol>
+    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.4-1 1-1 1.7M12 17h.01"/></symbol>
+    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
+    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-pencil" viewBox="0 0 24 24"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z"/><path d="M12 3v18" /></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
+  </svg>
+
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="brand">
+        <p class="brand__name">Norildo Santos</p>
+        <p class="brand__role">Administrador</p>
+      </div>
+
+      <nav class="menu" aria-label="Navegação principal">
+        <ul>
+          <li><a href="dashboard.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg>Dashboard</a></li>
+          <li><a href="admImoveis.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>Meus Imóveis</a></li>
+          <li><a href="leads.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-leads"/></svg>Leads</a></li>
+          <li><a href="relatorios.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-chart"/></svg>Relatórios</a></li>
+          <li><a href="config.html" class="menu__link is-active" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg>Configurações</a></li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__footer">
+        <a href="#" class="footer-link"><svg class="icon" aria-hidden="true"><use href="#i-help"/></svg>Suporte</a>
+        <a href="../index.html" class="footer-link"><svg class="icon" aria-hidden="true"><use href="#i-logout"/></svg>Sair</a>
+      </div>
+    </aside>
+
+    <div class="main">
+      <header class="topbar">
+        <p class="topbar__title">Dashboard</p>
+
+        <form class="search" role="search" action="#">
+          <label class="visually-hidden" for="busca">Buscar imóveis e leads</label>
+          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
+          <input id="busca" type="search" placeholder="Buscar imóveis, leads...">
+        </form>
+
+        <div class="topbar__actions">
+          <button type="button" class="icon-button" aria-label="Notificações">
+            <svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>
+          </button>
+          <button type="button" class="btn btn--primary btn--small">
+            <svg class="icon icon--small" aria-hidden="true"><use href="#i-plus"/></svg>Novo Imóvel
+          </button>
+        </div>
+      </header>
+
+      <main id="conteudo" class="content">
+        <form class="settings" action="#" method="post">
+          <h1 class="visually-hidden">Configurações da conta</h1>
+
+          <div class="grid">
+
+            <section class="card card--profile" aria-labelledby="titulo-perfil">
+              <div class="avatar">
+                <span class="avatar__initials" role="img" aria-label="Foto de perfil de Ricardo Silva">RS</span>
+                <button type="button" class="avatar__edit" aria-label="Alterar foto de perfil">
+                  <svg class="icon icon--small" aria-hidden="true"><use href="#i-pencil"/></svg>
+                </button>
+              </div>
+
+              <div class="profile">
+                <h2 id="titulo-perfil" class="card__title">Perfil do Administrador</h2>
+                <p class="card__text">Gerencie suas informações profissionais e credenciais.</p>
+
+                <div class="fields">
+                  <div class="field">
+                    <label for="nome">Nome completo</label>
+                    <input id="nome" name="nome" type="text" value="Ricardo Silva" autocomplete="name">
+                  </div>
+                  <div class="field">
+                    <label for="creci">Registro profissional (CRECI)</label>
+                    <input id="creci" name="creci" type="text" value="123.456-F">
+                  </div>
+                  <div class="field field--wide">
+                    <label for="email">E-mail corporativo</label>
+                    <input id="email" name="email" type="email" value="ricardo.silva@luxestates.com" autocomplete="email">
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            <section class="card card--security" aria-labelledby="titulo-seguranca">
+              <h2 id="titulo-seguranca" class="card__title">
+                <svg class="icon icon--small" aria-hidden="true"><use href="#i-shield"/></svg>Segurança
+              </h2>
+              <p class="card__text">Proteção da conta e autenticação.</p>
+
+              <ul class="option-list">
+                <li>
+                  <a href="#" class="option">
+                    <span class="option__body">
+                      <span class="option__title">Autenticação em 2 Etapas</span>
+                      <span class="option__meta">Ativo via Google Authenticator</span>
+                    </span>
+                    <svg class="icon icon--small" aria-hidden="true"><use href="#i-chevron"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="option">
+                    <span class="option__body">
+                      <span class="option__title">Alterar Senha</span>
+                      <span class="option__meta">Última alteração há 3 meses</span>
+                    </span>
+                    <svg class="icon icon--small" aria-hidden="true"><use href="#i-chevron"/></svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="option">
+                    <span class="option__body">
+                      <span class="option__title">Dispositivos Conectados</span>
+                      <span class="option__meta">3 sessões ativas</span>
+                    </span>
+                    <svg class="icon icon--small" aria-hidden="true"><use href="#i-chevron"/></svg>
+                  </a>
+                </li>
+              </ul>
+            </section>
+
+            <section class="card card--notifications" aria-labelledby="titulo-notificacoes">
+              <div class="card__header">
+                <div>
+                  <h2 id="titulo-notificacoes" class="card__title">Notificações</h2>
+                  <p class="card__text">Configure como você deseja ser alertado.</p>
+                </div>
+                <svg class="icon icon--large" aria-hidden="true"><use href="#i-bell"/></svg>
+              </div>
+
+              <ul class="toggle-list">
+                <li class="toggle">
+                  <div class="toggle__text">
+                    <label for="n-leads" class="toggle__title">Novos Leads</label>
+                    <p id="n-leads-desc" class="toggle__desc">Receba alertas em tempo real para novos contatos.</p>
+                  </div>
+                  <input id="n-leads" class="switch" type="checkbox" role="switch" name="notif_leads" aria-describedby="n-leads-desc" checked>
+                </li>
+                <li class="toggle">
+                  <div class="toggle__text">
+                    <label for="n-relatorios" class="toggle__title">Relatórios Semanais</label>
+                    <p id="n-relatorios-desc" class="toggle__desc">Resumo de desempenho por e-mail toda segunda-feira.</p>
+                  </div>
+                  <input id="n-relatorios" class="switch" type="checkbox" role="switch" name="notif_relatorios" aria-describedby="n-relatorios-desc" checked>
+                </li>
+                <li class="toggle">
+                  <div class="toggle__text">
+                    <label for="n-seguranca" class="toggle__title">Alertas de Segurança</label>
+                    <p id="n-seguranca-desc" class="toggle__desc">Notificar logins em novos dispositivos.</p>
+                  </div>
+                  <input id="n-seguranca" class="switch" type="checkbox" role="switch" name="notif_seguranca" aria-describedby="n-seguranca-desc" checked>
+                </li>
+              </ul>
+            </section>
+
+            <section class="card card--integrations" aria-labelledby="titulo-integracoes">
+              <h2 id="titulo-integracoes" class="card__title">Integrações</h2>
+              <p class="card__text">Conecte com suas ferramentas favoritas.</p>
+
+              <ul class="integration-list">
+                <li class="integration is-connected">
+                  <div class="integration__top">
+                    <span class="integration__logo" aria-hidden="true">CRM</span>
+                    <span class="badge badge--on">Conectado</span>
+                  </div>
+                  <h3 class="integration__name">Salesforce CRM</h3>
+                  <p class="integration__desc">Sincronização de leads em tempo real.</p>
+                </li>
+                <li class="integration">
+                  <div class="integration__top">
+                    <span class="integration__logo" aria-hidden="true">DOC</span>
+                    <span class="badge">Disponível</span>
+                  </div>
+                  <h3 class="integration__name">DocuSign</h3>
+                  <p class="integration__desc">Assinatura digital de contratos.</p>
+                </li>
+                <li class="integration is-connected">
+                  <div class="integration__top">
+                    <span class="integration__logo" aria-hidden="true">MKT</span>
+                    <span class="badge badge--on">Conectado</span>
+                  </div>
+                  <h3 class="integration__name">Mailchimp</h3>
+                  <p class="integration__desc">Automação de campanhas de e-mail.</p>
+                </li>
+                <li class="integration">
+                  <div class="integration__top">
+                    <span class="integration__logo" aria-hidden="true">MAP</span>
+                    <span class="badge">Disponível</span>
+                  </div>
+                  <h3 class="integration__name">Google Maps Pro</h3>
+                  <p class="integration__desc">Geolocalização avançada de imóveis.</p>
+                </li>
+              </ul>
+            </section>
+
+          </div>
+
+          <div class="form-actions">
+            <button type="reset" class="btn btn--ghost">Descartar Alterações</button>
+            <button type="submit" class="btn btn--save">Salvar Configurações</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </div>
+
+</body>
+</html>
