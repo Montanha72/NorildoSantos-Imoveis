@@ -1,273 +1,522 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Controle de Leads · Painel Imobiliário</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/stylesP.css">
-  <link rel="stylesheet" href="../styles/admin-nav.css">
-</head>
-<body class="admin-body">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Controle de Leads · Painel Imobiliário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/leads.css" />
+  </head>
+  <body class="admin-body">
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-dashboard" viewBox="0 0 24 24">
+        <rect x="3" y="3" width="7" height="9" rx="1" />
+        <rect x="14" y="3" width="7" height="5" rx="1" />
+        <rect x="14" y="12" width="7" height="9" rx="1" />
+        <rect x="3" y="16" width="7" height="5" rx="1" />
+      </symbol>
+      <symbol id="i-building" viewBox="0 0 24 24">
+        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
+        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
+        <path d="M10 6h4" />
+        <path d="M10 10h4" />
+        <path d="M10 14h4" />
+        <path d="M10 18h4" />
+      </symbol>
+      <symbol id="i-leads" viewBox="0 0 24 24">
+        <circle cx="10" cy="7" r="4" />
+        <path d="M10.3 15H7a4 4 0 0 0-4 4v2" />
+        <circle cx="17" cy="17" r="3" />
+        <path d="m21 21-1.9-1.9" />
+      </symbol>
+      <symbol id="i-menu" viewBox="0 0 24 24">
+        <path d="M4 6h16" />
+        <path d="M4 12h16" />
+        <path d="M4 18h16" />
+      </symbol>
+      <symbol id="i-reports" viewBox="0 0 24 24">
+        <rect width="18" height="18" x="3" y="3" rx="2" />
+        <path d="M8 17v-3" />
+        <path d="M12 17V8" />
+        <path d="M16 17v-5" />
+      </symbol>
+      <symbol id="i-gear" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3" />
+        <path
+          d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"
+        />
+        <circle cx="12" cy="12" r="7" />
+      </symbol>
+      <symbol id="i-help" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="10" />
+        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+        <path d="M12 17h.01" />
+      </symbol>
+      <symbol id="i-logout" viewBox="0 0 24 24">
+        <path
+          d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"
+        />
+      </symbol>
+      <symbol id="i-search" viewBox="0 0 24 24">
+        <circle cx="11" cy="11" r="7" />
+        <path d="m21 21-4.3-4.3" />
+      </symbol>
+      <symbol id="i-bell" viewBox="0 0 24 24">
+        <path
+          d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"
+        />
+      </symbol>
+      <symbol id="i-plus" viewBox="0 0 24 24">
+        <path d="M12 5v14M5 12h14" />
+      </symbol>
+      <symbol id="i-chevron" viewBox="0 0 24 24">
+        <path d="m9 6 6 6-6 6" />
+      </symbol>
+      <symbol id="i-filter" viewBox="0 0 24 24">
+        <path d="M3 6h18M6 12h12M10 18h4" />
+      </symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24">
+        <path d="m3 17 6-6 4 4 8-8M15 7h6v6" />
+      </symbol>
+      <symbol id="i-clock" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="9" />
+        <path d="M12 7v5l3 2" />
+      </symbol>
+      <symbol id="i-more" viewBox="0 0 24 24">
+        <path d="M12 5h.01M12 12h.01M12 19h.01" />
+      </symbol>
+    </svg>
 
-  <svg class="sprite" aria-hidden="true" focusable="false">
-    <symbol id="i-dashboard" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></symbol>
-    <symbol id="i-building" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></symbol>
-    <symbol id="i-leads" viewBox="0 0 24 24"><circle cx="10" cy="7" r="4"/><path d="M10.3 15H7a4 4 0 0 0-4 4v2"/><circle cx="17" cy="17" r="3"/><path d="m21 21-1.9-1.9"/></symbol>
-    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 6h16"/><path d="M4 12h16"/><path d="M4 18h16"/></symbol>
-    <symbol id="i-reports" viewBox="0 0 24 24"><rect width="18" height="18" x="3" y="3" rx="2"/><path d="M8 17v-3"/><path d="M12 17V8"/><path d="M16 17v-5"/></symbol>
-    <symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"/><circle cx="12" cy="12" r="7"/></symbol>
-    <symbol id="i-help" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><path d="M12 17h.01"/></symbol>
-    <symbol id="i-logout" viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></symbol>
-    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></symbol>
-    <symbol id="i-bell" viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"/></symbol>
-    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
-    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></symbol>
-    <symbol id="i-filter" viewBox="0 0 24 24"><path d="M3 6h18M6 12h12M10 18h4"/></symbol>
-    <symbol id="i-trend" viewBox="0 0 24 24"><path d="m3 17 6-6 4 4 8-8M15 7h6v6"/></symbol>
-    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
-    <symbol id="i-more" viewBox="0 0 24 24"><path d="M12 5h.01M12 12h.01M12 19h.01"/></symbol>
-  </svg>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
-
-  <div class="app">
-
-    <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
-      <div class="brand">
-        <p class="brand__name">Norildo Santos</p>
-        <p class="brand__role">Painel de Gestão</p>
-      </div>
-
-      <nav class="menu" aria-label="Navegação principal">
-        <ul>
-          <li><a href="dashboard.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-dashboard"/></svg>Dashboard</a></li>
-          <li><a href="admImoveis.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-building"/></svg>Meus Imóveis</a></li>
-          <li><a href="leads.html" class="menu__link is-active" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-leads"/></svg>Leads</a></li>
-          <li><a href="relatorios.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-reports"/></svg>Relatórios</a></li>
-          <li><a href="config.html" class="menu__link"><svg class="icon" aria-hidden="true"><use href="#i-gear"/></svg>Configurações</a></li>
-        </ul>
-      </nav>
-
-      <div class="sidebar__footer">
-        <a href="contato.html" class="footer-link"><svg class="icon" aria-hidden="true"><use href="#i-help"/></svg>Suporte</a>
-        <a href="../index.html" class="footer-link"><svg class="icon" aria-hidden="true"><use href="#i-logout"/></svg>Sair</a>
-      </div>
-    </aside>
-    <div class="sidebar-backdrop" aria-hidden="true"></div>
-
-    <div class="main">
-      <header class="topbar">
-        <button class="icon-button topbar__menu" type="button" data-sidebar-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg></button>
-        <p class="topbar__title">Leads</p>
-
-        <form class="search" role="search" action="#">
-          <label class="visually-hidden" for="busca">Buscar imóveis e leads</label>
-          <svg class="icon" aria-hidden="true"><use href="#i-search"/></svg>
-          <input id="busca" type="search" placeholder="Buscar imóveis, leads...">
-        </form>
-
-        <div class="topbar__actions">
-          <button type="button" class="icon-button" aria-label="Notificações">
-            <svg class="icon" aria-hidden="true"><use href="#i-bell"/></svg>
-          </button>
-          <button type="button" class="btn btn--primary btn--small">
-            <svg class="icon icon--small" aria-hidden="true"><use href="#i-plus"/></svg>Novo Imóvel
-          </button>
+    <div class="app">
+      <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
+        <div class="brand">
+          <p class="brand__name">Norildo Santos</p>
+          <p class="brand__role">Painel de Gestão</p>
         </div>
-      </header>
 
-      <main id="conteudo" class="content">
-
-        <div class="page-header">
-          <div>
-            <h1 class="page-title">Controle de Leads</h1>
-            <p class="page-subtitle">Observe seus possíveis clientes</p>
-          </div>
-          <div class="page-actions">
-            <button type="button" class="btn btn--outline">Exportar CSV</button>
-            <button type="button" class="btn btn--primary">
-              <svg class="icon icon--small" aria-hidden="true"><use href="#i-plus"/></svg>Novo Lead
-            </button>
-          </div>
-        </div>
-
-        <section aria-labelledby="titulo-indicadores">
-          <h2 id="titulo-indicadores" class="visually-hidden">Indicadores de leads</h2>
-          <ul class="stats">
-            <li class="card card--bordered stat">
-              <p class="stat__label">Total de leads</p>
-              <p class="stat__value">1.284</p>
-              <p class="stat__meta stat__meta--up">
-                <svg class="icon icon--small" aria-hidden="true"><use href="#i-trend"/></svg>12% este mês
-              </p>
+        <nav class="menu" aria-label="Navegação principal">
+          <ul>
+            <li>
+              <a href="dashboard.html" class="menu__link"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-dashboard" /></svg
+                >Dashboard</a
+              >
             </li>
-            <li class="card card--bordered stat">
-              <p class="stat__label">Novos interessados</p>
-              <p class="stat__value">42</p>
-              <p class="stat__meta">
-                <svg class="icon icon--small" aria-hidden="true"><use href="#i-clock"/></svg>Últimas 2 semanas
-              </p>
+            <li>
+              <a href="admImoveis.html" class="menu__link"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-building" /></svg
+                >Meus Imóveis</a
+              >
             </li>
-            <li class="card card--bordered stat">
-              <p class="stat__label">Taxa de conversão</p>
-              <p class="stat__value">8,4%</p>
-              <p class="stat__meta stat__meta--up">
-                <svg class="icon icon--small" aria-hidden="true"><use href="#i-plus"/></svg>0,5% em comparação ao mês passado
-              </p>
+            <li>
+              <a
+                href="leads.html"
+                class="menu__link is-active"
+                aria-current="page"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-leads" /></svg
+                >Leads</a
+              >
             </li>
-            <li class="card card--bordered stat">
-              <p class="stat__label">Negociações ativas</p>
-              <p class="stat__value">156</p>
-              <p class="stat__meta stat__meta--strong">Valor estimado: R$ 24 mi</p>
+            <li>
+              <a href="relatorios.html" class="menu__link"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-reports" /></svg
+                >Relatórios</a
+              >
+            </li>
+            <li>
+              <a href="config.html" class="menu__link"
+                ><svg class="icon" aria-hidden="true">
+                  <use href="#i-gear" /></svg
+                >Configurações</a
+              >
             </li>
           </ul>
-        </section>
+        </nav>
 
-        <section class="card card--bordered table-card" aria-labelledby="titulo-tabela">
-          <h2 id="titulo-tabela" class="visually-hidden">Lista de leads</h2>
+        <div class="sidebar__footer">
+          <a href="contato.html" class="footer-link"
+            ><svg class="icon" aria-hidden="true"><use href="#i-help" /></svg
+            >Suporte</a
+          >
+          <a href="../index.html" class="footer-link"
+            ><svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg
+            >Sair</a
+          >
+        </div>
+      </aside>
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
 
-          <div class="table-toolbar">
-            <nav aria-label="Filtrar leads">
-              <ul class="tabs">
-                <li><a href="#" class="tabs__link is-active" aria-current="true">Todos os leads</a></li>
-                <li><a href="#" class="tabs__link">Leads que mais compraram</a></li>
-                <li><a href="#" class="tabs__link">Arquivados</a></li>
-              </ul>
-            </nav>
-            <button type="button" class="icon-button" aria-label="Filtrar e ordenar a lista">
-              <svg class="icon" aria-hidden="true"><use href="#i-filter"/></svg>
+      <div class="main">
+        <header class="topbar">
+          <button
+            class="icon-button topbar__menu"
+            type="button"
+            data-sidebar-toggle
+            aria-label="Abrir menu"
+            aria-expanded="false"
+            aria-controls="sidebar"
+          >
+            <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+          <p class="topbar__title">Leads</p>
+
+          <form class="search" role="search" action="#">
+            <label class="visually-hidden" for="busca"
+              >Buscar imóveis e leads</label
+            >
+            <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+            <input
+              id="busca"
+              type="search"
+              placeholder="Buscar imóveis, leads..."
+            />
+          </form>
+
+          <div class="topbar__actions">
+            <button type="button" class="icon-button" aria-label="Notificações">
+              <svg class="icon" aria-hidden="true"><use href="#i-bell" /></svg>
+            </button>
+            <button type="button" class="btn btn--primary btn--small">
+              <svg class="icon icon--small" aria-hidden="true">
+                <use href="#i-plus" /></svg
+              >Novo Imóvel
             </button>
           </div>
+        </header>
 
-          <div class="table-wrap" tabindex="0" role="region" aria-labelledby="titulo-tabela">
-            <table class="table">
-              <thead>
-                <tr>
-                  <th scope="col">Lead</th>
-                  <th scope="col">Imóvel de interesse</th>
-                  <th scope="col">Tipo</th>
-                  <th scope="col">Data da solicitação</th>
-                  <th scope="col">Status</th>
-                  <th scope="col" class="table__actions">Ações</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">
-                    <div class="lead">
-                      <span class="lead__avatar" aria-hidden="true">JA</span>
-                      <div>
-                        <p class="lead__name">Julianne Abernathy</p>
-                        <p class="lead__meta">j.abernathy@client.com</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td>
-                    <p class="property__name">Skyline Penthouse</p>
-                    <p class="lead__meta">Apto. 4202 • R$ 12,5 mi</p>
-                  </td>
-                  <td><span class="tag">Compra</span></td>
-                  <td><time datetime="2023-10-24">24 Out 2023</time></td>
-                  <td><span class="status status--new">Novo</span></td>
-                  <td class="table__actions"><button type="button" class="icon-button" aria-label="Mais ações para Julianne Abernathy"><svg class="icon icon--small" aria-hidden="true"><use href="#i-more"/></svg></button></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="lead">
-                      <span class="lead__avatar lead__avatar--teal" aria-hidden="true">MT</span>
-                      <div>
-                        <p class="lead__name">Markus Theron</p>
-                        <p class="lead__meta">+44 7700 900077</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td><p class="property__name">Jardim Santa Rita - Mirassol</p></td>
-                  <td><span class="tag">Venda</span></td>
-                  <td><time datetime="2023-10-22">22 Out 2023</time></td>
-                  <td><span class="status status--contacting">Contatando</span></td>
-                  <td class="table__actions"><button type="button" class="icon-button" aria-label="Mais ações para Markus Theron"><svg class="icon icon--small" aria-hidden="true"><use href="#i-more"/></svg></button></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="lead">
-                      <span class="lead__avatar" aria-hidden="true">EL</span>
-                      <div>
-                        <p class="lead__name">Elena Larsson</p>
-                        <p class="lead__meta">e.larsson@global.co</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td>
-                    <p class="property__name">Alpine Retreat</p>
-                    <p class="lead__meta">Lote 12-B • R$ 4,2 mi</p>
-                  </td>
-                  <td><span class="tag">Compra</span></td>
-                  <td><time datetime="2023-10-19">19 Out 2023</time></td>
-                  <td><span class="status status--negotiating">Negociando</span></td>
-                  <td class="table__actions"><button type="button" class="icon-button" aria-label="Mais ações para Elena Larsson"><svg class="icon icon--small" aria-hidden="true"><use href="#i-more"/></svg></button></td>
-                </tr>
-                <tr>
-                  <th scope="row">
-                    <div class="lead">
-                      <span class="lead__avatar lead__avatar--teal" aria-hidden="true">SC</span>
-                      <div>
-                        <p class="lead__name">Sofia Chen</p>
-                        <p class="lead__meta">s.chen@investment.hk</p>
-                      </div>
-                    </div>
-                  </th>
-                  <td>
-                    <p class="property__name">Urban Loft</p>
-                    <p class="lead__meta">Unid. 14-C • R$ 2,1 mi</p>
-                  </td>
-                  <td><span class="tag">Compra</span></td>
-                  <td><time datetime="2023-10-15">15 Out 2023</time></td>
-                  <td><span class="status status--canceled">Cancelado</span></td>
-                  <td class="table__actions"><button type="button" class="icon-button" aria-label="Mais ações para Sofia Chen"><svg class="icon icon--small" aria-hidden="true"><use href="#i-more"/></svg></button></td>
-                </tr>
-              </tbody>
-            </table>
+        <main id="conteudo" class="content">
+          <div class="page-header">
+            <div>
+              <h1 class="page-title">Controle de Leads</h1>
+              <p class="page-subtitle">Observe seus possíveis clientes</p>
+            </div>
+            <div class="page-actions">
+              <button type="button" class="btn btn--outline">
+                Exportar CSV
+              </button>
+              <button type="button" class="btn btn--primary">
+                <svg class="icon icon--small" aria-hidden="true">
+                  <use href="#i-plus" /></svg
+                >Novo Lead
+              </button>
+            </div>
           </div>
 
-          <div class="table-footer">
-            <p class="table-footer__info">Mostrando 4 de 1.284 leads</p>
-            <nav aria-label="Paginação da lista de leads">
-              <ul class="pagination">
-                <li><button type="button" class="page-btn" aria-label="Página anterior" disabled><svg class="icon icon--small icon--flip" aria-hidden="true"><use href="#i-chevron"/></svg></button></li>
-                <li><a href="#" class="page-btn is-current" aria-current="page" aria-label="Página 1">1</a></li>
-                <li><a href="#" class="page-btn" aria-label="Página 2">2</a></li>
-                <li><a href="#" class="page-btn" aria-label="Página 3">3</a></li>
-                <li><a href="#" class="page-btn" aria-label="Próxima página"><svg class="icon icon--small" aria-hidden="true"><use href="#i-chevron"/></svg></a></li>
-              </ul>
-            </nav>
-          </div>
-        </section>
+          <section aria-labelledby="titulo-indicadores">
+            <h2 id="titulo-indicadores" class="visually-hidden">
+              Indicadores de leads
+            </h2>
+            <ul class="stats">
+              <li class="card card--bordered stat">
+                <p class="stat__label">Total de leads</p>
+                <p class="stat__value">1.284</p>
+                <p class="stat__meta stat__meta--up">
+                  <svg class="icon icon--small" aria-hidden="true">
+                    <use href="#i-trend" /></svg
+                  >12% este mês
+                </p>
+              </li>
+              <li class="card card--bordered stat">
+                <p class="stat__label">Novos interessados</p>
+                <p class="stat__value">42</p>
+                <p class="stat__meta">
+                  <svg class="icon icon--small" aria-hidden="true">
+                    <use href="#i-clock" /></svg
+                  >Últimas 2 semanas
+                </p>
+              </li>
+              <li class="card card--bordered stat">
+                <p class="stat__label">Taxa de conversão</p>
+                <p class="stat__value">8,4%</p>
+                <p class="stat__meta stat__meta--up">
+                  <svg class="icon icon--small" aria-hidden="true">
+                    <use href="#i-plus" /></svg
+                  >0,5% em comparação ao mês passado
+                </p>
+              </li>
+              <li class="card card--bordered stat">
+                <p class="stat__label">Negociações ativas</p>
+                <p class="stat__value">156</p>
+                <p class="stat__meta stat__meta--strong">
+                  Valor estimado: R$ 24 mi
+                </p>
+              </li>
+            </ul>
+          </section>
 
-        <section class="card card--bordered activity" aria-labelledby="titulo-atividade">
-          <h2 id="titulo-atividade" class="section-label">Atividade recente</h2>
-          <ul class="activity__list">
-            <li class="activity__item activity__item--neutral">
-              <p>Novo interesse em venda de imóvel - Casa - Rio de Janeiro - RJ</p>
-              <p class="activity__time">2 minutos atrás</p>
-            </li>
-            <li class="activity__item activity__item--info">
-              <p>Imóvel adicionado ao sistema - Apartamento - São Paulo - SP</p>
-              <p class="activity__time">45 minutos atrás</p>
-            </li>
-            <li class="activity__item activity__item--success">
-              <p>Nova venda confirmada - Casa - São José do Rio Preto - SP / João Ricardo</p>
-              <p class="activity__time">2 horas atrás</p>
-            </li>
-          </ul>
-        </section>
+          <section
+            class="card card--bordered table-card"
+            aria-labelledby="titulo-tabela"
+          >
+            <h2 id="titulo-tabela" class="visually-hidden">Lista de leads</h2>
 
-      </main>
+            <div class="table-toolbar">
+              <nav aria-label="Filtrar leads">
+                <ul class="tabs">
+                  <li>
+                    <a href="#" class="tabs__link is-active" aria-current="true"
+                      >Todos os leads</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="tabs__link">Leads que mais compraram</a>
+                  </li>
+                  <li><a href="#" class="tabs__link">Arquivados</a></li>
+                </ul>
+              </nav>
+              <button
+                type="button"
+                class="icon-button"
+                aria-label="Filtrar e ordenar a lista"
+              >
+                <svg class="icon" aria-hidden="true">
+                  <use href="#i-filter" />
+                </svg>
+              </button>
+            </div>
+
+            <div
+              class="table-wrap"
+              tabindex="0"
+              role="region"
+              aria-labelledby="titulo-tabela"
+            >
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Lead</th>
+                    <th scope="col">Imóvel de interesse</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Data da solicitação</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="table__actions">Ações</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                      <div class="lead">
+                        <span class="lead__avatar" aria-hidden="true">JA</span>
+                        <div>
+                          <p class="lead__name">Julianne Abernathy</p>
+                          <p class="lead__meta">j.abernathy@client.com</p>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <p class="property__name">Skyline Penthouse</p>
+                      <p class="lead__meta">Apto. 4202 • R$ 12,5 mi</p>
+                    </td>
+                    <td><span class="tag">Compra</span></td>
+                    <td><time datetime="2023-10-24">24 Out 2023</time></td>
+                    <td><span class="status status--new">Novo</span></td>
+                    <td class="table__actions">
+                      <button
+                        type="button"
+                        class="icon-button"
+                        aria-label="Mais ações para Julianne Abernathy"
+                      >
+                        <svg class="icon icon--small" aria-hidden="true">
+                          <use href="#i-more" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="lead">
+                        <span
+                          class="lead__avatar lead__avatar--teal"
+                          aria-hidden="true"
+                          >MT</span
+                        >
+                        <div>
+                          <p class="lead__name">Markus Theron</p>
+                          <p class="lead__meta">+44 7700 900077</p>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <p class="property__name">Jardim Santa Rita - Mirassol</p>
+                    </td>
+                    <td><span class="tag">Venda</span></td>
+                    <td><time datetime="2023-10-22">22 Out 2023</time></td>
+                    <td>
+                      <span class="status status--contacting">Contatando</span>
+                    </td>
+                    <td class="table__actions">
+                      <button
+                        type="button"
+                        class="icon-button"
+                        aria-label="Mais ações para Markus Theron"
+                      >
+                        <svg class="icon icon--small" aria-hidden="true">
+                          <use href="#i-more" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="lead">
+                        <span class="lead__avatar" aria-hidden="true">EL</span>
+                        <div>
+                          <p class="lead__name">Elena Larsson</p>
+                          <p class="lead__meta">e.larsson@global.co</p>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <p class="property__name">Alpine Retreat</p>
+                      <p class="lead__meta">Lote 12-B • R$ 4,2 mi</p>
+                    </td>
+                    <td><span class="tag">Compra</span></td>
+                    <td><time datetime="2023-10-19">19 Out 2023</time></td>
+                    <td>
+                      <span class="status status--negotiating">Negociando</span>
+                    </td>
+                    <td class="table__actions">
+                      <button
+                        type="button"
+                        class="icon-button"
+                        aria-label="Mais ações para Elena Larsson"
+                      >
+                        <svg class="icon icon--small" aria-hidden="true">
+                          <use href="#i-more" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                      <div class="lead">
+                        <span
+                          class="lead__avatar lead__avatar--teal"
+                          aria-hidden="true"
+                          >SC</span
+                        >
+                        <div>
+                          <p class="lead__name">Sofia Chen</p>
+                          <p class="lead__meta">s.chen@investment.hk</p>
+                        </div>
+                      </div>
+                    </th>
+                    <td>
+                      <p class="property__name">Urban Loft</p>
+                      <p class="lead__meta">Unid. 14-C • R$ 2,1 mi</p>
+                    </td>
+                    <td><span class="tag">Compra</span></td>
+                    <td><time datetime="2023-10-15">15 Out 2023</time></td>
+                    <td>
+                      <span class="status status--canceled">Cancelado</span>
+                    </td>
+                    <td class="table__actions">
+                      <button
+                        type="button"
+                        class="icon-button"
+                        aria-label="Mais ações para Sofia Chen"
+                      >
+                        <svg class="icon icon--small" aria-hidden="true">
+                          <use href="#i-more" />
+                        </svg>
+                      </button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="table-footer">
+              <p class="table-footer__info">Mostrando 4 de 1.284 leads</p>
+              <nav aria-label="Paginação da lista de leads">
+                <ul class="pagination">
+                  <li>
+                    <button
+                      type="button"
+                      class="page-btn"
+                      aria-label="Página anterior"
+                      disabled
+                    >
+                      <svg
+                        class="icon icon--small icon--flip"
+                        aria-hidden="true"
+                      >
+                        <use href="#i-chevron" />
+                      </svg>
+                    </button>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="page-btn is-current"
+                      aria-current="page"
+                      aria-label="Página 1"
+                      >1</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="page-btn" aria-label="Página 2">2</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-btn" aria-label="Página 3">3</a>
+                  </li>
+                  <li>
+                    <a href="#" class="page-btn" aria-label="Próxima página"
+                      ><svg class="icon icon--small" aria-hidden="true">
+                        <use href="#i-chevron" /></svg
+                    ></a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </section>
+
+          <section
+            class="card card--bordered activity"
+            aria-labelledby="titulo-atividade"
+          >
+            <h2 id="titulo-atividade" class="section-label">
+              Atividade recente
+            </h2>
+            <ul class="activity__list">
+              <li class="activity__item activity__item--neutral">
+                <p>
+                  Novo interesse em venda de imóvel - Casa - Rio de Janeiro - RJ
+                </p>
+                <p class="activity__time">2 minutos atrás</p>
+              </li>
+              <li class="activity__item activity__item--info">
+                <p>
+                  Imóvel adicionado ao sistema - Apartamento - São Paulo - SP
+                </p>
+                <p class="activity__time">45 minutos atrás</p>
+              </li>
+              <li class="activity__item activity__item--success">
+                <p>
+                  Nova venda confirmada - Casa - São José do Rio Preto - SP /
+                  João Ricardo
+                </p>
+                <p class="activity__time">2 horas atrás</p>
+              </li>
+            </ul>
+          </section>
+        </main>
+      </div>
     </div>
-  </div>
 
-  <script src="../js/admin.js" defer></script>
-</body>
+    <script src="../js/admin.js" defer></script>
+  </body>
 </html>

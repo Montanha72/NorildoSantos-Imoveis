@@ -16,7 +16,7 @@
   if (ano) ano.textContent = new Date().getFullYear();
 
   /* ---------- Cabeçalho: sombra ao rolar + menu mobile ---------- */
-  const header = $('.site-header');
+  const header = $('.cabecalho, .site-header');
   const toggle = $('.menu-toggle');
   const menu = $('#menu-principal');
 

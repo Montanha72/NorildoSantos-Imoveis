@@ -1,166 +1,274 @@
-﻿<!DOCTYPE html>
+﻿<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Venda seu imóvel · Norildo Santos Corretor de Imóveis</title>
-  <meta name="description" content="Anuncie seu imóvel de alto padrão com visibilidade estratégica, produção visual premium e assessoria jurídica segura.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../styles/stylesP.css">
-  <script src="../js/nav.js" defer></script>
-</head>
-<body class="site">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Venda seu imóvel · Norildo Santos Corretor de Imóveis</title>
+    <meta
+      name="description"
+      content="Anuncie seu imóvel de alto padrão com visibilidade estratégica, produção visual premium e assessoria jurídica segura."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@500;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../styles/main.css" />
+    <link rel="stylesheet" href="../styles/vender.css" />
+    <script src="../js/main.js" defer></script>
+  </head>
+  <body class="site">
+    <svg class="sprite" aria-hidden="true" focusable="false">
+      <symbol id="i-eye" viewBox="0 0 24 24">
+        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
+        <circle cx="12" cy="12" r="3" />
+      </symbol>
+      <symbol id="i-camera" viewBox="0 0 24 24">
+        <path
+          d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"
+        />
+        <circle cx="12" cy="13" r="3.5" />
+      </symbol>
+      <symbol id="i-gavel" viewBox="0 0 24 24">
+        <path d="m14 4 6 6M10.5 7.5l6 6M5 13l6-6 6 6-6 6ZM3 21h9" />
+      </symbol>
+      <symbol id="i-arrow" viewBox="0 0 24 24">
+        <path d="M5 12h14M13 6l6 6-6 6" />
+      </symbol>
+    </svg>
 
-  <svg class="sprite" aria-hidden="true" focusable="false">
-    <symbol id="i-eye" viewBox="0 0 24 24"><path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z"/><circle cx="12" cy="12" r="3"/></symbol>
-    <symbol id="i-camera" viewBox="0 0 24 24"><path d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"/><circle cx="12" cy="13" r="3.5"/></symbol>
-    <symbol id="i-gavel" viewBox="0 0 24 24"><path d="m14 4 6 6M10.5 7.5l6 6M5 13l6-6 6 6-6 6ZM3 21h9"/></symbol>
-    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
-  </svg>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
-  <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <header class="site-header">
+      <div class="container site-header__inner">
+        <a href="../index.html" class="site-logo">Norildo Santos</a>
 
-  <header class="site-header">
-    <div class="container site-header__inner">
-      <a href="../index.html" class="site-logo">Norildo Santos</a>
+        <nav
+          class="site-nav"
+          id="menu-principal"
+          aria-label="Navegação do site"
+        >
+          <ul>
+            <li><a href="../index.html">Início</a></li>
+            <li><a href="imoveis.html">Imóveis</a></li>
+            <li><a href="vender.html" aria-current="page">Vender</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
+        </nav>
 
-      <nav class="site-nav" id="menu-principal" aria-label="Navegação do site">
-        <ul>
-          <li><a href="../index.html">Início</a></li>
-          <li><a href="imoveis.html">Imóveis</a></li>
-          <li><a href="vender.html" aria-current="page">Vender</a></li>
-          <li><a href="sobre.html">Sobre</a></li>
-          <li><a href="contato.html">Contato</a></li>
-        </ul>
-      </nav>
-
-      <div class="site-header__actions">
-        <a href="login.html" class="site-link">Entrar</a>
-        <a href="#cadastro" class="btn btn--primary btn--small">Anunciar</a>
-      </div>
-      <button class="menu-toggle site-menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">☰</button>
-    </div>
-  </header>
-
-  <main id="conteudo">
-
-    <section class="hero" aria-labelledby="titulo-hero">
-      <div class="container hero__inner">
-        <div class="hero__text">
-          <h1 id="titulo-hero" class="hero__title">Confie seu imóvel a quem entende de exclusividade.</h1>
-          <p class="hero__lead">Um posicionamento estratégico no mercado de alto padrão garante não apenas a venda, mas a valorização do seu patrimônio. Oferecemos um serviço sob medida, do ensaio fotográfico à assinatura do contrato.</p>
-          <a href="#cadastro" class="btn btn--primary btn--small hero__cta">Iniciar Cadastro</a>
+        <div class="site-header__actions">
+          <a href="login.html" class="site-link">Entrar</a>
+          <a href="#cadastro" class="btn btn--primary btn--small">Anunciar</a>
         </div>
-        <figure class="hero__media" role="img" aria-label="Sala de estar contemporânea com sofá claro, mesa baixa, cortinas altas e grandes janelas para o jardim"></figure>
+        <button
+          class="menu-toggle site-menu-toggle"
+          type="button"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu-principal"
+        >
+          ☰
+        </button>
       </div>
-    </section>
+    </header>
 
-    <section class="features" aria-labelledby="titulo-diferenciais">
-      <div class="container">
-        <div class="section-head">
-          <h2 id="titulo-diferenciais" class="section-title">A Diferença na Entrega</h2>
-          <p class="section-lead">Anunciar conosco significa elevar o padrão da apresentação do seu imóvel, alcançando compradores qualificados com assertividade.</p>
+    <main id="conteudo">
+      <section class="hero" aria-labelledby="titulo-hero">
+        <div class="container hero__inner">
+          <div class="hero__text">
+            <h1 id="titulo-hero" class="hero__title">
+              Confie seu imóvel a quem entende de exclusividade.
+            </h1>
+            <p class="hero__lead">
+              Um posicionamento estratégico no mercado de alto padrão garante
+              não apenas a venda, mas a valorização do seu patrimônio.
+              Oferecemos um serviço sob medida, do ensaio fotográfico à
+              assinatura do contrato.
+            </p>
+            <a href="#cadastro" class="btn btn--primary btn--small hero__cta"
+              >Iniciar Cadastro</a
+            >
+          </div>
+          <figure
+            class="hero__media"
+            role="img"
+            aria-label="Sala de estar contemporânea com sofá claro, mesa baixa, cortinas altas e grandes janelas para o jardim"
+          ></figure>
         </div>
+      </section>
 
-        <ul class="feature-list">
-          <li class="feature">
-            <span class="feature__icon"><svg class="icon icon--small" aria-hidden="true"><use href="#i-eye"/></svg></span>
-            <h3 class="feature__title">Visibilidade Estratégica</h3>
-            <p class="feature__text">Seu imóvel em destaque nas principais plataformas premium e direcionado para uma carteira seleta de clientes investidores.</p>
-          </li>
-          <li class="feature">
-            <span class="feature__icon"><svg class="icon icon--small" aria-hidden="true"><use href="#i-camera"/></svg></span>
-            <h3 class="feature__title">Produção Visual Premium</h3>
-            <p class="feature__text">Ensaios fotográficos profissionais, vídeos em alta resolução e tours virtuais que capturam a essência e os detalhes arquitetônicos.</p>
-          </li>
-          <li class="feature">
-            <span class="feature__icon"><svg class="icon icon--small" aria-hidden="true"><use href="#i-gavel"/></svg></span>
-            <h3 class="feature__title">Assessoria Jurídica Segura</h3>
-            <p class="feature__text">Tranquilidade do início ao fim. Acompanhamento rigoroso da documentação, garantindo uma negociação transparente e sem riscos.</p>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="cadastro" class="register" aria-labelledby="titulo-cadastro">
-      <div class="container">
-        <form class="register-card" action="#" method="post">
+      <section class="features" aria-labelledby="titulo-diferenciais">
+        <div class="container">
           <div class="section-head">
-            <h2 id="titulo-cadastro" class="section-title">Cadastre seu Imóvel</h2>
-            <p class="section-lead">Preencha os dados abaixo. Nossa equipe entrará em contato em até 24 horas para agendar uma avaliação.</p>
+            <h2 id="titulo-diferenciais" class="section-title">
+              A Diferença na Entrega
+            </h2>
+            <p class="section-lead">
+              Anunciar conosco significa elevar o padrão da apresentação do seu
+              imóvel, alcançando compradores qualificados com assertividade.
+            </p>
           </div>
 
-          <div class="form-grid">
-            <div class="line-field">
-              <label for="v-nome">Nome Completo</label>
-              <input id="v-nome" name="nome" type="text" placeholder="Ex: João Silva" autocomplete="name" required>
-            </div>
-            <div class="line-field">
-              <label for="v-telefone">Telefone / WhatsApp</label>
-              <input id="v-telefone" name="telefone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel" required>
-            </div>
-            <div class="line-field">
-              <label for="v-email">E-mail</label>
-              <input id="v-email" name="email" type="email" placeholder="joao@exemplo.com" autocomplete="email" required>
-            </div>
-            <div class="line-field">
-              <label for="v-tipo">Tipo de Imóvel</label>
-              <select id="v-tipo" name="tipo" required>
-                <option value="" selected disabled>Selecione o tipo</option>
-                <option value="casa">Casa</option>
-                <option value="apartamento">Apartamento</option>
-                <option value="cobertura">Cobertura</option>
-                <option value="terreno">Terreno</option>
-                <option value="comercial">Sala ou imóvel comercial</option>
-              </select>
-            </div>
-            <div class="line-field line-field--wide">
-              <label for="v-local">Localização / Bairro do Imóvel</label>
-              <input id="v-local" name="localizacao" type="text" placeholder="Ex: Jardins, São Paulo" required>
-            </div>
-            <div class="line-field line-field--wide">
-              <label for="v-mensagem">Mensagem ou Detalhes Breves</label>
-              <textarea id="v-mensagem" name="mensagem" rows="3" placeholder="Conte-nos um pouco sobre os diferenciais do imóvel..."></textarea>
-            </div>
-          </div>
+          <ul class="feature-list">
+            <li class="feature">
+              <span class="feature__icon"
+                ><svg class="icon icon--small" aria-hidden="true">
+                  <use href="#i-eye" /></svg
+              ></span>
+              <h3 class="feature__title">Visibilidade Estratégica</h3>
+              <p class="feature__text">
+                Seu imóvel em destaque nas principais plataformas premium e
+                direcionado para uma carteira seleta de clientes investidores.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="feature__icon"
+                ><svg class="icon icon--small" aria-hidden="true">
+                  <use href="#i-camera" /></svg
+              ></span>
+              <h3 class="feature__title">Produção Visual Premium</h3>
+              <p class="feature__text">
+                Ensaios fotográficos profissionais, vídeos em alta resolução e
+                tours virtuais que capturam a essência e os detalhes
+                arquitetônicos.
+              </p>
+            </li>
+            <li class="feature">
+              <span class="feature__icon"
+                ><svg class="icon icon--small" aria-hidden="true">
+                  <use href="#i-gavel" /></svg
+              ></span>
+              <h3 class="feature__title">Assessoria Jurídica Segura</h3>
+              <p class="feature__text">
+                Tranquilidade do início ao fim. Acompanhamento rigoroso da
+                documentação, garantindo uma negociação transparente e sem
+                riscos.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
 
-          <div class="register-card__actions">
-            <button type="submit" class="btn btn--primary btn--small">
-              Enviar Solicitação<svg class="icon icon--tiny" aria-hidden="true"><use href="#i-arrow"/></svg>
-            </button>
-          </div>
-        </form>
+      <section id="cadastro" class="register" aria-labelledby="titulo-cadastro">
+        <div class="container">
+          <form class="register-card" action="#" method="post">
+            <div class="section-head">
+              <h2 id="titulo-cadastro" class="section-title">
+                Cadastre seu Imóvel
+              </h2>
+              <p class="section-lead">
+                Preencha os dados abaixo. Nossa equipe entrará em contato em até
+                24 horas para agendar uma avaliação.
+              </p>
+            </div>
+
+            <div class="form-grid">
+              <div class="line-field">
+                <label for="v-nome">Nome Completo</label>
+                <input
+                  id="v-nome"
+                  name="nome"
+                  type="text"
+                  placeholder="Ex: João Silva"
+                  autocomplete="name"
+                  required
+                />
+              </div>
+              <div class="line-field">
+                <label for="v-telefone">Telefone / WhatsApp</label>
+                <input
+                  id="v-telefone"
+                  name="telefone"
+                  type="tel"
+                  placeholder="(00) 00000-0000"
+                  autocomplete="tel"
+                  required
+                />
+              </div>
+              <div class="line-field">
+                <label for="v-email">E-mail</label>
+                <input
+                  id="v-email"
+                  name="email"
+                  type="email"
+                  placeholder="joao@exemplo.com"
+                  autocomplete="email"
+                  required
+                />
+              </div>
+              <div class="line-field">
+                <label for="v-tipo">Tipo de Imóvel</label>
+                <select id="v-tipo" name="tipo" required>
+                  <option value="" selected disabled>Selecione o tipo</option>
+                  <option value="casa">Casa</option>
+                  <option value="apartamento">Apartamento</option>
+                  <option value="cobertura">Cobertura</option>
+                  <option value="terreno">Terreno</option>
+                  <option value="comercial">Sala ou imóvel comercial</option>
+                </select>
+              </div>
+              <div class="line-field line-field--wide">
+                <label for="v-local">Localização / Bairro do Imóvel</label>
+                <input
+                  id="v-local"
+                  name="localizacao"
+                  type="text"
+                  placeholder="Ex: Jardins, São Paulo"
+                  required
+                />
+              </div>
+              <div class="line-field line-field--wide">
+                <label for="v-mensagem">Mensagem ou Detalhes Breves</label>
+                <textarea
+                  id="v-mensagem"
+                  name="mensagem"
+                  rows="3"
+                  placeholder="Conte-nos um pouco sobre os diferenciais do imóvel..."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="register-card__actions">
+              <button type="submit" class="btn btn--primary btn--small">
+                Enviar Solicitação<svg
+                  class="icon icon--tiny"
+                  aria-hidden="true"
+                >
+                  <use href="#i-arrow" />
+                </svg>
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container site-footer__inner">
+        <div class="site-footer__brand">
+          <p class="site-logo">Norildo Santos</p>
+          <p>
+            © 2024 Norildo Santos - Corretor de Imóveis. CRECI J-0000. Todos os
+            direitos reservados.
+          </p>
+        </div>
+        <nav aria-labelledby="rodape-legal">
+          <h2 id="rodape-legal" class="footer-title">Legal</h2>
+          <ul>
+            <li><a href="#">Política de Privacidade</a></li>
+            <li><a href="#">Termos de Uso</a></li>
+          </ul>
+        </nav>
+        <nav aria-labelledby="rodape-acesso">
+          <h2 id="rodape-acesso" class="footer-title">Acesso</h2>
+          <ul>
+            <li><a href="#">Mapa do Site</a></li>
+            <li><a href="#">Trabalhe Conosco</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
-
-  </main>
-
-  <footer class="site-footer">
-    <div class="container site-footer__inner">
-      <div class="site-footer__brand">
-        <p class="site-logo">Norildo Santos</p>
-        <p>© 2024 Norildo Santos - Corretor de Imóveis. CRECI J-0000. Todos os direitos reservados.</p>
-      </div>
-      <nav aria-labelledby="rodape-legal">
-        <h2 id="rodape-legal" class="footer-title">Legal</h2>
-        <ul>
-          <li><a href="#">Política de Privacidade</a></li>
-          <li><a href="#">Termos de Uso</a></li>
-        </ul>
-      </nav>
-      <nav aria-labelledby="rodape-acesso">
-        <h2 id="rodape-acesso" class="footer-title">Acesso</h2>
-        <ul>
-          <li><a href="#">Mapa do Site</a></li>
-          <li><a href="#">Trabalhe Conosco</a></li>
-        </ul>
-      </nav>
-    </div>
-  </footer>
-
-</body>
+    </footer>
+  </body>
 </html>
-
-
