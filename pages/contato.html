@@ -23,40 +23,26 @@
 
     <!-- Cabeçalho -->
     <header class="site-header">
-      <div class="header__inner">
-        <a
-          class="logo"
-          href="../index.html"
-          aria-label="Norildo Santos — página inicial"
-          >Norildo Santos</a
-        >
-
-        <nav class="nav" id="menu-principal" aria-label="Navegação principal">
-          <a href="../index.html">Início</a>
-          <a href="imoveis.html">Imóveis</a>
-          <a href="vender.html">Vender</a>
-          <a href="../index.html#sobre">Sobre</a>
-          <a href="contato.html" aria-current="page">Contato</a>
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Norildo Santos</a>
+        <nav class="site-nav" id="menu-principal" aria-label="Navega&ccedil;&atilde;o principal">
+          <ul>
+            <li><a href="../index.html#inicio">In&iacute;cio</a></li>
+            <li><a href="imoveis.html">Im&oacute;veis</a></li>
+            <li><a href="vender.html">Vender</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html" aria-current="page">Contato</a></li>
+          </ul>
         </nav>
-
-        <div class="header__actions">
-          <a class="link-entrar" href="login.html">Entrar</a>
-          <a class="btn btn--primary btn--sm" href="vender.html#cadastro"
-            >Anunciar</a
-          >
-          <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="menu-principal"
-          >
-            <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
-          </button>
+        <div class="site-header__actions">
+          <a class="site-link" href="login.html">Entrar</a>
+          <a class="btn btn--primary btn--small" href="vender.html#cadastro">Anunciar</a>
         </div>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+        </button>
       </div>
     </header>
-
     <main class="contact">
       <div class="container">
         <header class="contact__intro">

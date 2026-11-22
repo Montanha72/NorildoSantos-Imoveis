@@ -16,13 +16,15 @@
   if (ano) ano.textContent = new Date().getFullYear();
 
   /* ---------- Cabeçalho: sombra ao rolar + menu mobile ---------- */
-  const header = $('.cabecalho, .site-header');
+  const header = $('.site-header');
   const toggle = $('.menu-toggle');
   const menu = $('#menu-principal');
 
   if (header) {
-    const atualizarSombra = () =>
-      header.classList.toggle('is-scrolled', window.scrollY > 8);
+    const atualizarSombra = () => {
+      const rolado = window.scrollY > 8;
+      header.classList.toggle('is-scrolled', rolado);
+    };
 
     atualizarSombra();
     window.addEventListener('scroll', atualizarSombra, { passive: true });

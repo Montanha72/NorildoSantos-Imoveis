@@ -19,61 +19,39 @@
     <script src="../js/main.js" defer></script>
   </head>
   <body class="site">
-    <svg class="sprite" aria-hidden="true" focusable="false">
-      <symbol id="i-eye" viewBox="0 0 24 24">
-        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
-        <circle cx="12" cy="12" r="3" />
-      </symbol>
-      <symbol id="i-camera" viewBox="0 0 24 24">
-        <path
-          d="M4 8h3l2-3h6l2 3h3a1 1 0 0 1 1 1v10a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1Z"
-        />
-        <circle cx="12" cy="13" r="3.5" />
-      </symbol>
-      <symbol id="i-gavel" viewBox="0 0 24 24">
-        <path d="m14 4 6 6M10.5 7.5l6 6M5 13l6-6 6 6-6 6ZM3 21h9" />
-      </symbol>
-      <symbol id="i-arrow" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 6l6 6-6 6" />
-      </symbol>
-    </svg>
-
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <script src="../js/icons.js"></script>
 
     <header class="site-header">
-      <div class="container site-header__inner">
-        <a href="../index.html" class="site-logo">Norildo Santos</a>
-
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Norildo Santos</a>
         <nav
           class="site-nav"
           id="menu-principal"
-          aria-label="Navegação do site"
+          aria-label="Navega&ccedil;&atilde;o principal"
         >
           <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="imoveis.html">Imóveis</a></li>
+            <li><a href="../index.html#inicio">In&iacute;cio</a></li>
+            <li><a href="imoveis.html">Im&oacute;veis</a></li>
             <li><a href="vender.html" aria-current="page">Vender</a></li>
             <li><a href="sobre.html">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </nav>
-
         <div class="site-header__actions">
-          <a href="login.html" class="site-link">Entrar</a>
-          <a href="#cadastro" class="btn btn--primary btn--small">Anunciar</a>
+          <a class="site-link" href="login.html">Entrar</a>
+          <a class="btn btn--primary btn--small" href="#cadastro">Anunciar</a>
         </div>
         <button
-          class="menu-toggle site-menu-toggle"
+          class="menu-toggle"
           type="button"
           aria-label="Abrir menu"
           aria-expanded="false"
           aria-controls="menu-principal"
         >
-          ☰
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
         </button>
       </div>
     </header>
-
     <main id="conteudo">
       <section class="hero" aria-labelledby="titulo-hero">
         <div class="container hero__inner">
@@ -94,7 +72,7 @@
           <figure
             class="hero__media"
             role="img"
-            aria-label="Sala de estar contemporânea com sofá claro, mesa baixa, cortinas altas e grandes janelas para o jardim"
+            aria-label="Sala de estar clara com sofás brancos, lareira moderna e grandes janelas"
           ></figure>
         </div>
       </section>
@@ -115,8 +93,9 @@
             <li class="feature">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-eye" /></svg
-              ></span>
+                  <use href="#i-eye" />
+                </svg>
+              </span>
               <h3 class="feature__title">Visibilidade Estratégica</h3>
               <p class="feature__text">
                 Seu imóvel em destaque nas principais plataformas premium e
@@ -126,8 +105,9 @@
             <li class="feature">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-camera" /></svg
-              ></span>
+                  <use href="#i-camera" />
+                </svg>
+              </span>
               <h3 class="feature__title">Produção Visual Premium</h3>
               <p class="feature__text">
                 Ensaios fotográficos profissionais, vídeos em alta resolução e
@@ -138,8 +118,9 @@
             <li class="feature">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-gavel" /></svg
-              ></span>
+                  <use href="#i-gavel" />
+                </svg>
+              </span>
               <h3 class="feature__title">Assessoria Jurídica Segura</h3>
               <p class="feature__text">
                 Tranquilidade do início ao fim. Acompanhamento rigoroso da
@@ -232,10 +213,8 @@
 
             <div class="register-card__actions">
               <button type="submit" class="btn btn--primary btn--small">
-                Enviar Solicitação<svg
-                  class="icon icon--tiny"
-                  aria-hidden="true"
-                >
+                Enviar Solicitação
+                <svg class="icon icon--tiny" aria-hidden="true">
                   <use href="#i-arrow" />
                 </svg>
               </button>

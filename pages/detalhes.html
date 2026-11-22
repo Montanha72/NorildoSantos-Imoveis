@@ -18,32 +18,28 @@
     <script src="../js/detalhes.js" defer></script>
   </head>
   <body>
-    <header class="cabecalho" id="main-nav">
-      <div>
-        <a class="logo" href="../index.html">Norildo Santos</a>
-        <nav id="menu-principal" aria-label="Navegação principal">
-          <a href="../index.html">Início</a>
-          <a class="ativo" href="imoveis.html" aria-current="page">Imóveis</a>
-          <a href="vender.html">Vender</a>
-          <a href="sobre.html">Sobre</a>
-          <a href="contato.html">Contato</a>
+    <script src="../js/icons.js"></script>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Norildo Santos</a>
+        <nav class="site-nav" id="menu-principal" aria-label="Navega&ccedil;&atilde;o principal">
+          <ul>
+            <li><a href="../index.html#inicio">In&iacute;cio</a></li>
+            <li><a href="imoveis.html" aria-current="page">Im&oacute;veis</a></li>
+            <li><a href="vender.html">Vender</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+            <li><a href="contato.html">Contato</a></li>
+          </ul>
         </nav>
-        <div class="acoes">
-          <a href="login.html">Entrar</a>
-          <a class="botao" href="vender.html#cadastro">Anunciar</a>
+        <div class="site-header__actions">
+          <a class="site-link" href="login.html">Entrar</a>
+          <a class="btn btn--primary btn--small" href="vender.html#cadastro">Anunciar</a>
         </div>
-        <button
-          class="menu-toggle"
-          type="button"
-          aria-label="Abrir menu"
-          aria-expanded="false"
-          aria-controls="menu-principal"
-        >
-          <span class="icone" aria-hidden="true">menu</span>
+        <button class="menu-toggle" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-principal">
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
         </button>
       </div>
     </header>
-
     <main>
       <section class="galeria">
         <img

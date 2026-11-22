@@ -21,89 +21,41 @@
     <script src="../js/icons.js"></script>
 
     <div class="admin">
-      <aside
-        class="sidebar barra-lateral"
-        id="sidebar"
-        aria-label="Menu administrativo"
-      >
+      <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
         <div class="sidebar__brand">
           <a href="../index.html">Norildo Santos</a>
-          <span>Painel de Gestão</span>
+          <span>Painel de Gest&atilde;o</span>
         </div>
-        <nav class="sidebar__nav" aria-label="Seções da administração">
-          <a class="sidebar__link" href="dashboard.html">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-dashboard" />
-            </svg>
-            Dashboard
-          </a>
-          <a class="sidebar__link" href="admImoveis.html" aria-current="page">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-building" />
-            </svg>
-            Meus Imóveis
-          </a>
-          <a class="sidebar__link" href="leads.html">
-            <svg class="icon" aria-hidden="true"><use href="#i-leads" /></svg>
-            Leads
-          </a>
-          <a class="sidebar__link" href="relatorios.html">
-            <svg class="icon" aria-hidden="true"><use href="#i-reports" /></svg>
-            Relatórios
-          </a>
-          <a class="sidebar__link" href="config.html">
-            <svg class="icon" aria-hidden="true">
-              <use href="#i-gear" />
-            </svg>
-            Configurações
-          </a>
+        <nav class="sidebar__nav" aria-label="Se&ccedil;&otilde;es da administra&ccedil;&atilde;o">
+          <a class="sidebar__link" href="dashboard.html"><svg class="icon" aria-hidden="true"><use href="#i-dashboard" /></svg>Dashboard</a>
+          <a class="sidebar__link" href="admImoveis.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-building" /></svg>Meus Im&oacute;veis</a>
+          <a class="sidebar__link" href="leads.html"><svg class="icon" aria-hidden="true"><use href="#i-leads" /></svg>Leads</a>
+          <a class="sidebar__link" href="relatorios.html"><svg class="icon" aria-hidden="true"><use href="#i-reports" /></svg>Relat&oacute;rios</a>
+          <a class="sidebar__link" href="config.html"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg>Configura&ccedil;&otilde;es</a>
         </nav>
         <div class="sidebar__foot">
-          <a class="sidebar__link" href="contato.html">
-            <svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>
-            Suporte
-          </a>
-          <a class="sidebar__link" href="../index.html">
-            <svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>
-            Sair
-          </a>
+          <a class="sidebar__link" href="contato.html"><svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>Suporte</a>
+          <a class="sidebar__link" href="../index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>Sair</a>
         </div>
       </aside>
-      <div class="sidebar-backdrop fundo-escuro" aria-hidden="true"></div>
-
+      <div class="sidebar-backdrop" aria-hidden="true"></div>
       <div class="admin__main">
-        <header class="barra-topo topbar">
-          <div class="esquerda">
-            <button
-              class="botao-icone topbar__menu"
-              type="button"
-              data-sidebar-toggle
-              aria-label="Abrir menu"
-              aria-expanded="false"
-              aria-controls="sidebar"
-            >
-              <span class="icone" aria-hidden="true">menu</span>
-            </button>
-            <h1 class="topbar__title">Meus Imóveis</h1>
-            <label class="pesquisa"
-              ><span class="icone">search</span
-              ><input placeholder="Buscar imóveis..." type="text"
-            /></label>
+        <header class="topbar">
+          <button class="icon-btn topbar__menu" type="button" data-sidebar-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
+            <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
+          </button>
+          <h1 class="topbar__title">Meus Im&oacute;veis</h1>
+          <div class="topbar__search" role="search">
+            <label class="visually-hidden" for="busca-topo">Buscar im&oacute;veis e leads</label>
+            <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
+            <input id="busca-topo" type="search" placeholder="Buscar im&oacute;veis, leads..." autocomplete="off" />
           </div>
-          <div class="direita">
-            <button class="botao-icone">
-              <span class="icone">notifications</span>
-            </button>
-            <button class="botao-icone">
-              <span class="icone">account_circle</span>
-            </button>
-            <button class="botao">
-              <span class="icone">add</span> NOVO IMÓVEL
-            </button>
+          <div class="topbar__actions">
+            <button class="icon-btn" type="button" aria-label="Notifica&ccedil;&otilde;es"><svg class="icon" aria-hidden="true"><use href="#i-bell" /></svg></button>
+            <a class="btn btn--primary btn--sm" href="#novo-imovel"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="btn-label">Novo Im&oacute;vel</span></a>
           </div>
         </header>
-
-        <main class="conteudo admin-content">
+        <main class="admin-content">
           <section class="cabecalho-pagina">
             <div>
               <h2>Meus Imóveis</h2>

@@ -14,7 +14,7 @@
     />
     <link rel="stylesheet" href="../styles/main.css" />
     <link rel="stylesheet" href="../styles/cadastro.css" />
-    <script src="../js/cadastro.js" defer></script>
+    <script src="../js/auth.js" defer></script>
   </head>
   <body>
     <aside class="imagem-lateral">
@@ -23,7 +23,6 @@
         src="https://lh3.googleusercontent.com/aida-public/AB6AXuADapuyiwHIOalSxuxiO4aaN2w3AxoGDCnIovF94F3XYBnq1xpa9NkrDryyZkqOu8SQJ5CwzfeLFnWisIAy38cCJLr83N5vvcGVpzKrdsRILHeFtUk2LghUumJ5oeACiCNjMKcyClL1KnW6M5a0If6-NuXeiXW9svZc5KSTIx2Cl-c7mJYCOA4KpL2LPFg1rKFC-GnFziHJDvHzPuO9e4NH8vbA5xT-mpgEuv2iSEd6H3x_zIgbnb6wE-2VX-6Os7keA6vckrTtKg"
       />
     </aside>
-
     <main class="painel-formulario">
       <div class="formulario">
         <div class="logo">Norildo Santos</div>
@@ -32,7 +31,7 @@
           <p>Preencha os dados abaixo para iniciar sua jornada exclusiva.</p>
         </header>
 
-        <form>
+        <form data-redirect="login.html">
           <div class="campo">
             <label for="nome">Nome completo</label>
             <input id="nome" name="nome" required type="text" />

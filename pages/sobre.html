@@ -19,65 +19,41 @@
     <script src="../js/main.js" defer></script>
   </head>
   <body class="site">
-    <svg class="sprite" aria-hidden="true" focusable="false">
-      <symbol id="i-eye" viewBox="0 0 24 24">
-        <path d="M2 12s3.6-7 10-7 10 7 10 7-3.6 7-10 7S2 12 2 12Z" />
-        <circle cx="12" cy="12" r="3" />
-      </symbol>
-      <symbol id="i-flag" viewBox="0 0 24 24">
-        <path d="M5 21V4h11l-2 4 2 4H5" />
-      </symbol>
-      <symbol id="i-diamond" viewBox="0 0 24 24">
-        <path
-          d="M6 3h12l4 6-10 12L2 9ZM2 9h20M9 3l3 6 3-6M12 21 9 9m6 0-3 12"
-        />
-      </symbol>
-      <symbol id="i-arrow" viewBox="0 0 24 24">
-        <path d="M5 12h14M13 6l6 6-6 6" />
-      </symbol>
-      <symbol id="i-down" viewBox="0 0 24 24">
-        <path d="M12 5v14M6 13l6 6 6-6" />
-      </symbol>
-    </svg>
-
-    <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
+    <script src="../js/icons.js"></script>
 
     <header class="site-header">
-      <div class="container site-header__inner">
-        <a href="../index.html" class="site-logo">Norildo Santos</a>
-
+      <div class="site-header__inner">
+        <a class="site-logo" href="../index.html">Norildo Santos</a>
         <nav
           class="site-nav"
           id="menu-principal"
-          aria-label="Navegação do site"
+          aria-label="Navega&ccedil;&atilde;o principal"
         >
           <ul>
-            <li><a href="../index.html">Início</a></li>
-            <li><a href="imoveis.html">Imóveis</a></li>
+            <li><a href="../index.html#inicio">In&iacute;cio</a></li>
+            <li><a href="imoveis.html">Im&oacute;veis</a></li>
             <li><a href="vender.html">Vender</a></li>
             <li><a href="sobre.html" aria-current="page">Sobre</a></li>
             <li><a href="contato.html">Contato</a></li>
           </ul>
         </nav>
-
         <div class="site-header__actions">
-          <a href="login.html" class="site-link">Entrar</a>
-          <a href="vender.html#cadastro" class="btn btn--primary btn--small"
+          <a class="site-link" href="login.html">Entrar</a>
+          <a class="btn btn--primary btn--small" href="vender.html#cadastro"
             >Anunciar</a
           >
         </div>
         <button
-          class="menu-toggle site-menu-toggle"
+          class="menu-toggle"
           type="button"
           aria-label="Abrir menu"
           aria-expanded="false"
           aria-controls="menu-principal"
         >
-          ☰
+          <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
         </button>
       </div>
     </header>
-
     <main id="conteudo">
       <section class="hero hero--about" aria-labelledby="titulo-hero">
         <div class="container hero__inner">
@@ -97,8 +73,9 @@
                 class="icon icon--small"
                 aria-hidden="true"
               >
-                <use href="#i-down" /></svg
-            ></a>
+                <use href="#i-down" />
+              </svg>
+            </a>
           </div>
           <figure
             class="hero__media hero__media--garden"
@@ -128,8 +105,9 @@
             <li class="pillar">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-eye" /></svg
-              ></span>
+                  <use href="#i-eye" />
+                </svg>
+              </span>
               <h3 class="pillar__label">A Visão</h3>
               <p class="pillar__text">
                 Ser a referência absoluta em consultoria imobiliária de luxo,
@@ -141,8 +119,9 @@
             <li class="pillar">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-flag" /></svg
-              ></span>
+                  <use href="#i-flag" />
+                </svg>
+              </span>
               <h3 class="pillar__label">A Missão</h3>
               <p class="pillar__text">
                 Conectar indivíduos exigentes a lares que refletem suas
@@ -154,8 +133,9 @@
             <li class="pillar">
               <span class="feature__icon"
                 ><svg class="icon icon--small" aria-hidden="true">
-                  <use href="#i-diamond" /></svg
-              ></span>
+                  <use href="#i-diamond" />
+                </svg>
+              </span>
               <h3 class="pillar__label">Os Valores</h3>
               <p class="pillar__text">
                 Exclusividade no portfólio. Transparência cristalina em cada

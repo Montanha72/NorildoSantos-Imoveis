@@ -14,191 +14,47 @@
     <link rel="stylesheet" href="../styles/config.css" />
   </head>
   <body class="admin-body">
-    <svg class="sprite" aria-hidden="true" focusable="false">
-      <symbol id="i-dashboard" viewBox="0 0 24 24">
-        <rect x="3" y="3" width="7" height="9" rx="1" />
-        <rect x="14" y="3" width="7" height="5" rx="1" />
-        <rect x="14" y="12" width="7" height="9" rx="1" />
-        <rect x="3" y="16" width="7" height="5" rx="1" />
-      </symbol>
-      <symbol id="i-building" viewBox="0 0 24 24">
-        <path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
-        <path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2" />
-        <path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2" />
-        <path d="M10 6h4" />
-        <path d="M10 10h4" />
-        <path d="M10 14h4" />
-        <path d="M10 18h4" />
-      </symbol>
-      <symbol id="i-leads" viewBox="0 0 24 24">
-        <circle cx="10" cy="7" r="4" />
-        <path d="M10.3 15H7a4 4 0 0 0-4 4v2" />
-        <circle cx="17" cy="17" r="3" />
-        <path d="m21 21-1.9-1.9" />
-      </symbol>
-      <symbol id="i-menu" viewBox="0 0 24 24">
-        <path d="M4 6h16" />
-        <path d="M4 12h16" />
-        <path d="M4 18h16" />
-      </symbol>
-      <symbol id="i-reports" viewBox="0 0 24 24">
-        <rect width="18" height="18" x="3" y="3" rx="2" />
-        <path d="M8 17v-3" />
-        <path d="M12 17V8" />
-        <path d="M16 17v-5" />
-      </symbol>
-      <symbol id="i-gear" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="3" />
-        <path
-          d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9 7 7M17 17l2.1 2.1M19.1 4.9 17 7M7 17l-2.1 2.1"
-        />
-        <circle cx="12" cy="12" r="7" />
-      </symbol>
-      <symbol id="i-help" viewBox="0 0 24 24">
-        <circle cx="12" cy="12" r="10" />
-        <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
-        <path d="M12 17h.01" />
-      </symbol>
-      <symbol id="i-logout" viewBox="0 0 24 24">
-        <path
-          d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"
-        />
-      </symbol>
-      <symbol id="i-search" viewBox="0 0 24 24">
-        <circle cx="11" cy="11" r="7" />
-        <path d="m21 21-4.3-4.3" />
-      </symbol>
-      <symbol id="i-bell" viewBox="0 0 24 24">
-        <path
-          d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.9 1.9 0 0 0 3.4 0"
-        />
-      </symbol>
-      <symbol id="i-plus" viewBox="0 0 24 24">
-        <path d="M12 5v14M5 12h14" />
-      </symbol>
-      <symbol id="i-pencil" viewBox="0 0 24 24">
-        <path d="M12 20h9M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z" />
-      </symbol>
-      <symbol id="i-shield" viewBox="0 0 24 24">
-        <path d="M12 3 4 6v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V6Z" />
-        <path d="M12 3v18" />
-      </symbol>
-      <symbol id="i-chevron" viewBox="0 0 24 24">
-        <path d="m9 6 6 6-6 6" />
-      </symbol>
-    </svg>
+    <script src="../js/icons.js"></script>
+
 
     <a class="skip-link" href="#conteudo">Ir para o conteúdo principal</a>
 
-    <div class="app">
+    <div class="admin">
       <aside class="sidebar" id="sidebar" aria-label="Menu administrativo">
-        <div class="brand">
-          <p class="brand__name">Norildo Santos</p>
-          <p class="brand__role">Painel de Gestão</p>
+        <div class="sidebar__brand">
+          <a href="../index.html">Norildo Santos</a>
+          <span>Painel de Gest&atilde;o</span>
         </div>
-
-        <nav class="menu" aria-label="Navegação principal">
-          <ul>
-            <li>
-              <a href="dashboard.html" class="menu__link">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-dashboard" />
-                </svg>
-                Dashboard
-              </a>
-            </li>
-            <li>
-              <a href="admImoveis.html" class="menu__link">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-building" />
-                </svg>
-                Meus Imóveis
-              </a>
-            </li>
-            <li>
-              <a href="leads.html" class="menu__link">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-leads" />
-                </svg>
-                Leads
-              </a>
-            </li>
-            <li>
-              <a href="relatorios.html" class="menu__link">
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-reports" />
-                </svg>
-                Relatórios
-              </a>
-            </li>
-            <li>
-              <a
-                href="config.html"
-                class="menu__link is-active"
-                aria-current="page"
-              >
-                <svg class="icon" aria-hidden="true">
-                  <use href="#i-gear" />
-                </svg>
-                Configurações
-              </a>
-            </li>
-          </ul>
+        <nav class="sidebar__nav" aria-label="Se&ccedil;&otilde;es da administra&ccedil;&atilde;o">
+          <a class="sidebar__link" href="dashboard.html"><svg class="icon" aria-hidden="true"><use href="#i-dashboard" /></svg>Dashboard</a>
+          <a class="sidebar__link" href="admImoveis.html"><svg class="icon" aria-hidden="true"><use href="#i-building" /></svg>Meus Im&oacute;veis</a>
+          <a class="sidebar__link" href="leads.html"><svg class="icon" aria-hidden="true"><use href="#i-leads" /></svg>Leads</a>
+          <a class="sidebar__link" href="relatorios.html"><svg class="icon" aria-hidden="true"><use href="#i-reports" /></svg>Relat&oacute;rios</a>
+          <a class="sidebar__link" href="config.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-gear" /></svg>Configura&ccedil;&otilde;es</a>
         </nav>
-
-        <div class="sidebar__footer">
-          <a href="contato.html" class="footer-link">
-            <svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>
-            Suporte
-          </a>
-          <a href="../index.html" class="footer-link">
-            <svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>
-            Sair
-          </a>
+        <div class="sidebar__foot">
+          <a class="sidebar__link" href="contato.html"><svg class="icon" aria-hidden="true"><use href="#i-help" /></svg>Suporte</a>
+          <a class="sidebar__link" href="../index.html"><svg class="icon" aria-hidden="true"><use href="#i-logout" /></svg>Sair</a>
         </div>
       </aside>
       <div class="sidebar-backdrop" aria-hidden="true"></div>
-
-      <div class="main">
+      <div class="admin__main">
         <header class="topbar">
-          <button
-            class="icon-button topbar__menu"
-            type="button"
-            data-sidebar-toggle
-            aria-label="Abrir menu"
-            aria-expanded="false"
-            aria-controls="sidebar"
-          >
+          <button class="icon-btn topbar__menu" type="button" data-sidebar-toggle aria-label="Abrir menu" aria-expanded="false" aria-controls="sidebar">
             <svg class="icon" aria-hidden="true"><use href="#i-menu" /></svg>
           </button>
-          <p class="topbar__title">Configurações</p>
-
-          <form class="search" role="search" action="#">
-            <label class="visually-hidden" for="busca"
-              >Buscar imóveis e leads</label
-            >
+          <h1 class="topbar__title">Configura&ccedil;&otilde;es</h1>
+          <div class="topbar__search" role="search">
+            <label class="visually-hidden" for="busca-topo">Buscar im&oacute;veis e leads</label>
             <svg class="icon" aria-hidden="true"><use href="#i-search" /></svg>
-            <input
-              id="busca"
-              type="search"
-              placeholder="Buscar imóveis, leads..."
-            />
-          </form>
-
+            <input id="busca-topo" type="search" placeholder="Buscar im&oacute;veis, leads..." autocomplete="off" />
+          </div>
           <div class="topbar__actions">
-            <button type="button" class="icon-button" aria-label="Notificações">
-              <svg class="icon" aria-hidden="true"><use href="#i-bell" /></svg>
-            </button>
-            <button type="button" class="btn btn--primary btn--small">
-              <svg class="icon icon--small" aria-hidden="true">
-                <use href="#i-plus" />
-              </svg>
-              Novo Imóvel
-            </button>
+            <button class="icon-btn" type="button" aria-label="Notifica&ccedil;&otilde;es"><svg class="icon" aria-hidden="true"><use href="#i-bell" /></svg></button>
+            <a class="btn btn--primary btn--sm" href="#novo-imovel"><svg class="icon" aria-hidden="true"><use href="#i-plus" /></svg><span class="btn-label">Novo Im&oacute;vel</span></a>
           </div>
         </header>
-
-        <main id="conteudo" class="content">
+        <main id="conteudo" class="admin-content">
           <form class="settings" action="#" method="post">
             <h1 class="visually-hidden">Configurações da conta</h1>
 
