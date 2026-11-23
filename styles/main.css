@@ -194,6 +194,8 @@ body.admin-body {
   --lavender: #d9e2ff;
   --slate: #5a6275;
   --navy: #131a24;
+  --action-blue: #3d5a9a;
+  --action-blue-hover: #304a83;
   --success-bg: #e4ebff;
   --success-ink: #3b4a78;
   --radius: 12px;
@@ -500,7 +502,7 @@ body.admin-body .topbar__actions .btn {
   padding: 0 16px;
   border: 0;
   border-radius: 6px;
-  background: #3d5a9a;
+  background: var(--action-blue);
   color: #fff;
   font-size: 0.75rem;
   font-weight: 600;
@@ -511,7 +513,7 @@ body.admin-body .topbar__actions .btn {
   transition: background-color 0.2s ease, transform 0.2s ease;
 }
 body.admin-body .topbar__actions .btn:hover {
-  background: #304a83;
+  background: var(--action-blue-hover);
 }
 body.admin-body .topbar__actions .btn:active {
   transform: translateY(1px);
@@ -1477,6 +1479,9 @@ body.admin-body .status-tag--review {
 :where(body:not(.admin-body):not(.site)) img.is-missing {
   visibility: hidden;
 } /* ---------- Botões ---------- */
+body.admin-body img.is-missing {
+  visibility: hidden;
+}
 
 :where(body:not(.admin-body):not(.site)) .btn {
   display: inline-flex;
